@@ -17,7 +17,11 @@ export function todoReducer(state = initialState, action) {
       return { ...state, filter: action.filter };
     case Actions.ADD_TODO:
       const newState = state;
-      newState.todos.push({ task: action.todo.task, id: action.todo.id });
+      newState.todos.push({
+        task: action.todo.task,
+        id: action.todo.id,
+        completed: false
+      });
 
     default:
       return state;

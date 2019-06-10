@@ -1,21 +1,20 @@
 import React from 'react';
 import './App.css';
 
-import { store } from './store';
-import { addTodo } from './store/actions/todo';
+import TodoList from './components/TodoList';
 
 class App extends React.Component {
-  componentDidMount() {
-    console.log(store.getState());
-
-    const unsubscribe = store.subscribe(() => console.log(store.getState()));
-
-    store.dispatch(addTodo({ task: 'Our new Task', id: '123' }));
-    unsubscribe();
-  }
-
   render() {
-    return <div className='App' />;
+    return (
+      <div className='App'>
+        <TodoList
+          todos={[
+            { task: 'hello', id: '11', completed: false },
+            { task: 'bye', id: '22', completed: true }
+          ]}
+        />
+      </div>
+    );
   }
 }
 

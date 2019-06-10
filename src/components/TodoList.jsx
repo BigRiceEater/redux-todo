@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
-import { store } from './../store'
+import TodoItem from './TodoItem';
 
 class TodoList extends Component {
-  render() { 
-    store.get
-    return (  );
+  render() {
+    const { todos } = this.props;
+    return (
+      <div>
+        {todos.map(todo => (
+          <TodoItem todo={todo} />
+        ))}
+      </div>
+    );
   }
 }
- 
+
 export default TodoList;
