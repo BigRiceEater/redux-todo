@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 
 import TodoList from './components/TodoList';
+import AddTodo from './components/AddTodo';
 
 class App extends React.Component {
   render() {
@@ -13,6 +14,7 @@ class App extends React.Component {
             { task: 'bye', id: '22', completed: true }
           ]}
         />
+        <AddTodo />
       </div>
     );
   }

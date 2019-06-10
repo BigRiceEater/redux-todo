@@ -7,7 +7,7 @@ class TodoList extends Component {
     return (
       <div>
         {todos.map(todo => (
-          <TodoItem todo={todo} />
+          <TodoItem key={todo.id} todo={todo} />
         ))}
       </div>
     );

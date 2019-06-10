@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 class TodoItem extends Component {
   render() {
-    const { task, id, completed } = this.props.todo;
+    const { task, completed } = this.props.todo;
     return (
-      <div key={id}>
+      <div>
         <div>{task}</div>
         <div>
           <input type='checkbox' defaultChecked={completed} />
