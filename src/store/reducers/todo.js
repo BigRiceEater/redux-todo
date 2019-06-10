@@ -16,8 +16,9 @@ export function todoReducer(state = initialState, action) {
     case Actions.SET_VISIBILITY:
       return { ...state, filter: action.filter };
     case Actions.ADD_TODO:
-      const newState = state;
-      newState.todos = [...state.todos, action.todo];
+      const todos = [...state.todos, action.todo];
+
+      const newState = { ...state, todos };
       return newState;
     default:
       return state;
