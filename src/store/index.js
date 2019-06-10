@@ -8,4 +8,7 @@ function AppState(state, action) {
   }
 }
 
-export const store = createStore(AppState);
+export const store = createStore(
+  AppState,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
