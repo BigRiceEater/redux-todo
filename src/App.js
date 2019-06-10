@@ -1,19 +1,15 @@
 import React from 'react';
 import './App.css';
+import { addTodo } from './store/actions/todo';
 
-import TodoList from './components/TodoList';
+import TodoList from './containers/ReduxTodoList';
 import AddTodo from './components/AddTodo';
 
 class App extends React.Component {
   render() {
     return (
       <div className='App'>
-        <TodoList
-          todos={[
-            { task: 'hello', id: '11', completed: false },
-            { task: 'bye', id: '22', completed: true }
-          ]}
-        />
+        <TodoList />
         <AddTodo />
       </div>
     );
